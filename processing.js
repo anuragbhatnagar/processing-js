@@ -55,6 +55,18 @@
     };
   }
 
+
+  /* IE9 Compatibility mode fix */
+  var vMode = document.documentMode; // get the documentMode if browser is IE
+  if (vMode == 9) { 
+      var doctype = document.doctype;
+      if (doctype == "null") {  // if browser is IE9, check to make sure the doctype for html 5 is declared, or warn the user/developer
+		  // alert("Doctype Directive is missing"); 
+		  throw("DocType directive is missing. The recommended DocType in IE 9 is the HTML 5 DocType: <!DOCTYPE html>"); }
+  }
+  /* IE9 Compatibility mode fix end */
+  
+  
   var Float32Array = setupTypedArray("Float32Array", "WebGLFloatArray"),
       Int32Array   = setupTypedArray("Int32Array",   "WebGLIntArray"),
       Uint16Array  = setupTypedArray("Uint16Array",  "WebGLUnsignedShortArray"),
