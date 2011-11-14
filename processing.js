@@ -15499,7 +15499,7 @@
             if (read >= aImgWidth) {
               break;
             }
-            offset = (read + yi) * 4;
+            offset = (read + yi) *4;
             m = sharedBlurKernal[i];
             ca += m * pix[offset + 3];
             cr += m * pix[offset];
