@@ -15481,7 +15481,7 @@
       var sharedBlurRadius = p.shared.blurRadius;
       var sharedBlurKernal = p.shared.blurKernel;
       var pix = aImg.imageData.data;
-
+ 
       for (y = 0; y < aImgHeight; y++) {
         for (x = 0; x < aImgWidth; x++) {
           cb = cg = cr = ca = sum = 0;
@@ -15499,7 +15499,7 @@
             if (read >= aImgWidth) {
               break;
             }
-            offset = (read + yi) *4;
+            offset = (read + yi) * 4;
             m = sharedBlurKernal[i];
             ca += m * pix[offset + 3];
             cr += m * pix[offset];
@@ -15554,8 +15554,8 @@
           pix[offset + 2] = cb / sum;
           pix[offset + 3] = ca / sum;
         }
-        yi += aImgWidth;
-        ymi += aImgWidth;
+        yi += aImgWidth-p.externals.canvas.width;
+        ymi += aImgWidth-p.externals.canvas.width;
         ym++;
       }
     };
