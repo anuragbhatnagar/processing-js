@@ -1,4 +1,5 @@
 var tests = [
+  { path: "blurFilter.pde", tags: ["2D"] },
   { path: "stretch.pde", tags: ["3D"] },
   { path: "arc-fill-crisp.pde", tags: ["2D"], epsilonOverride: 0.07 },
   { path: "mixture.pde", tags: ["3D"], knownFailureTicket: "1239" },

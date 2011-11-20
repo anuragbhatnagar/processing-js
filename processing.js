@@ -15554,6 +15554,7 @@
           pix[offset + 2] = cb / sum;
           pix[offset + 3] = ca / sum;
         }
+        // subtract canvas width to adjust for shifting canvas (bug #1392)
         yi += aImgWidth-p.externals.canvas.width;
         ymi += aImgWidth-p.externals.canvas.width;
         ym++;
