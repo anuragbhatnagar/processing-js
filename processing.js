@@ -58,7 +58,6 @@
 
   /* IE9+ Compatibility mode fix  - Bug 1606*/  
   
-  
   if (document.documentMode >= 9 && !document.doctype) {
     p.println("DocType directive is missing. The recommended DocType in IE 9 is the HTML 5 DocType: <!DOCTYPE html>");
   }   
